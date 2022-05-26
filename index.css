@@ -3,7 +3,6 @@
     padding:0;
     box-sizing: border-box;
 }
-
 body{
     background-color: #2D93A5;
     height: 100vh;
@@ -11,6 +10,8 @@ body{
 .container h4{
     color: rgb(187, 207, 0);
     margin: 35px 0;
+    font-size: 26px !important;
+    font-weight: bold;
 }
 .row:nth-child(1){
     display: flex;
@@ -30,6 +31,7 @@ body{
     margin: 0;
     min-height: 400px;
     background-color: white !important;
+    font-size: 16px;
 }
 textarea{
     height: 100%;
@@ -37,6 +39,7 @@ textarea{
     width: 100%;
     border: unset;
     padding: 10px;
+    font-size: 16px;
 }
 textarea:focus{
 outline: unset;
@@ -45,10 +48,7 @@ latex-js{
     height: 100vh;
 }
 
-#textInput{
-    padding: 20px !important;
-    box-sizing: border-box;
-}
+
 /* .example{
     position: absolute;
     z-index: 10;

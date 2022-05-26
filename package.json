@@ -1,0 +1,23 @@
+{
+  "name": "latex-math",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBekzod0899/latex-math.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrBekzod0899/latex-math/issues"
+  },
+  "homepage": "https://github.com/MrBekzod0899/latex-math#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "latex.js": "^0.12.4"
+  }
+}
