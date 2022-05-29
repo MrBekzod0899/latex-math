@@ -8,24 +8,30 @@
 <body>
   <div class="container-fluid container-lg container-md container-sm ">
     <div class="row">
-      <h4 class="text-center text-light">Math Latex Compiler</h4>
-      <button class="btn btn-primary" onclick="showExample()">See Example</button>
+      <div class="col-lg-12 text-left title">
+        <p class="text-center">Math Latex Compiler</p>
+      </div>
     </div>
     <div class="row"> 
       <div class="col-lg-6 col-12">
-        <textarea type="text text-dark" placeholder="type something..." id="textLand" onblur="getText(event)" >
-          </textarea>
+        <textarea type="text text-dark" placeholder="type something..." id="textLand" oninput="getText(event)" ></textarea>
       </div>
       <div id="textInput" class=" col-lg-6 col-12">
-
       </div>
     </div>
   </div>
+
+<script type="module">
+  import { LaTeXJSComponent } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs"
+  customElements.define("latex-js", LaTeXJSComponent)
+</script>
+<!-- <script src="https://cdn.anychart.com/releases/8.11.0/js/graphics.min.js"></script> -->
+<script src="/node_modules/latex.js/dist/latex.js"></script>
 <script>
   let inputText=document.getElementById('textInput')
   let textLand=document.getElementById('textLand')
   let text=document.getElementById('text')
-
+  
   function getText(event){
     var text = ""
     inputText.innerText=''
@@ -38,18 +44,7 @@
     text.appendChild(generator.domFragment())
     text.appendChild('/')
   }
-
-  function showExample(){
-    let example=document.querySelector('.example')
-    console.log(example)
-    example.classList.toggle('show')
-  }
 </script>
-  <script type="module">
-    import { LaTeXJSComponent } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs"
-    customElements.define("latex-js", LaTeXJSComponent)
-  </script>
-  <script src="https://cdn.anychart.com/releases/8.11.0/js/graphics.min.js"></script>
-  <script src="/node_modules/latex.js/dist/latex.js"></script>
+
 </body>
 </html>
