@@ -1,0 +1,43 @@
+<div class="page-sidebar">
+  <div class="logo-box"><a href="#" class="logo-text">{{user.login}}</a><a
+      href="#"
+      id="sidebar-close"
+    ><i class="material-icons">close</i></a>
+    <a href="#" id="sidebar-state"><i class="material-icons">adjust</i><i
+        class="material-icons compact-sidebar-icon"
+      >panorama_fish_eye</i></a></div>
+  <div class="page-sidebar-inner slimscroll">
+    <ul class="accordion-menu">
+      <li class="sidebar-title">
+        Admin
+      </li>
+      <li {{#if isHome}} class="active-page" {{/if}}>
+        <a href="/" {{#if isHome}} class="active" {{/if}}><i
+            class="material-icons-outlined"
+          >dashboard</i>Bosh sahifa</a>
+      </li>
+      <li {{#if isSubject}} class="active-page" {{/if}} >
+        <a href="/subject" {{#if isSubject}} class="active" {{/if}} ><i
+            class="material-icons-outlined"
+          >slideshow</i>Subjects</a>
+      </li>
+      <li {{#if isCategory}} class="active-page" {{/if}} >
+        <a href="/category" {{#if isCategory}} class="active" {{/if}} ><i
+            class="material-icons-outlined"
+          >dashboard</i>Category</a>
+      </li>
+      <li {{#if isTeacher}}   class="active-page" {{/if}} >
+        <a href="/teacher" {{#if isTeacher}} class="active" {{/if}} ><i
+            class="material-icons-outlined"
+          >grid_view</i>Teacher</a>
+      </li>
+      <li {{#if isProject}} class="active-page" {{/if}}>
+        <a href="/moderator" {{#if isProdcut}} class="active" {{/if}}>
+        <i class="material-icons-outlined">shopping_basket</i>Moderator</a>
+      </li>
+      <li {{#if isStatus}} class="active-page" {{/if}}>
+        <a {{#if isStatus}} class="active" {{/if}} href="/status"><i class="material-icons">settings</i>Status</a>
+      </li>    
+    </ul>
+  </div>
+</div>

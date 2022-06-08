@@ -1,0 +1,28 @@
+.newscontent{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.newscontent .col-xl .card .card-body{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mytable thead tr th{
+    padding: 10px 20px;
+}
+.mytable tbody tr td:last-child{
+    white-space: nowrap;
+}
+.mymodal input{
+    padding: 5px 10px;
+}
+.auth-page.sign-in .auth-image {
+    background: url('../images/login.svg') center center no-repeat;
+    background-size: 90% 70%;
+}
+.user-auth .auth-image{
+    background: url('../images/500.svg') center center no-repeat !important;
+    background-size: 100% 70%;
+}
