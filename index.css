@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #2D93A5;
+    background-color: #2D93A5 ;
     height: 100vh;
 }
 .title{
-    color: rgb(187, 207, 0) !important;
-    font-size: 30px !important;
+    color: rgb(187, 207, 0) ;
+    font-size: 30px;
     font-weight: bold;
 }
 .row:nth-child(1){
@@ -32,20 +32,18 @@ body{
     background-color: white !important;
     font-size: 16px;
 }
-textarea{
-    height: 100%;
-    resize: unset !important;
-    width: 100%;
+.row .col-lg-6 textarea{
+    height: 100% !important;
+    resize: unset;
+    width: 100% !important;
     border: unset;
     padding: 10px;
-    font-size: 16px;
 }
-textarea:focus{
-outline: unset;
+.row .col-lg-6 textarea:focus{
+    outline: unset !important;
 }
-latex-js{
-    height: 100vh;
-}
+
 #textInput{
-    padding:5px 20px;
+    padding: 20px;
 }
+

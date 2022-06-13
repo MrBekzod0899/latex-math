@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>MathJax TeX Test Page</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./index.css">
+  <html lang="en">
+  <head>
+	<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+	<title>KaTeX Live Demo</title>
+	<link id="local" rel="stylesheet" type="text/css" href="katex.min.css">
+	<script src="katex.min.js"></script>
+	<link rel="stylesheet" href="demo.css">
+	<script src="demo.js"></script>
+	<!-- <script src="sample1.js"></script>
+	<script src="samplecolour.js"></script>
+	<script src="sample2.js"></script>
+	<script src="version.js"></script> -->
+	<script src="copy-tex.min.js"></script>
+	<link rel="stylesheet" href="copy-tex.min.css">
+	<script src="mhchem.min.js"></script>
 </head>
-<body>
-  <div class="container-fluid container-lg container-md container-sm ">
-    <div class="row">
-      <div class="col-lg-12 text-left title">
-        <p class="text-center">Math Latex Compiler</p>
-      </div>
-    </div>
-    <div class="row"> 
-      <div class="col-lg-6 col-12">
-        <textarea type="text text-dark" placeholder="type something..." id="textLand" oninput="getText(event)" ></textarea>
-      </div>
-      <div id="textInput" class=" col-lg-6 col-12">
-      </div>
-    </div>
-  </div>
 
-<script type="module">
-  import { LaTeXJSComponent } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs"
-  customElements.define("latex-js", LaTeXJSComponent)
-</script>
-<!-- <script src="https://cdn.anychart.com/releases/8.11.0/js/graphics.min.js"></script> -->
-<script src="/node_modules/latex.js/dist/latex.js"></script>
-<script>
-  let inputText=document.getElementById('textInput')
-  let textLand=document.getElementById('textLand')
-  let text=document.getElementById('text')
-  
-  function getText(event){
-    var text = ""
-    inputText.innerText=''
-    text=event.target.value
-    var generator = new latexjs.HtmlGenerator({ hyphenate: true})
-    generator = latexjs.parse(text, { generator: generator })
-    inputText.appendChild(generator.domFragment())
-    document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js@0.12.4/dist/"))
-    document.head.appendChild(generator.stylesAndScripts(""))    
-    text.appendChild(generator.domFragment())
-    text.appendChild('/')
-  }
-</script>
+<body> 
+	<h1>Math Compiler</h1>
+	<a href="viewquestion.html">view question</a>
+	<div id="question-form">	
+		<div id="columnright">
+			<span id="logo" style="display: none;" ></span> 
+			<input type="text" id="extra" style="display: none;">
+			<div id="extrabr"></div>
+			<form class="form-control" action="http://localhost:8080/api/demotest" method="post">
+				<textarea  placeholder="Savolni kiriting..." id="formula" style="background-color:white;" name="question"></textarea>
+				<textarea  placeholder="A variantni kiriting..." id="answerA" name="answer_a"></textarea>
+				<textarea  placeholder="B variantni kiriting..." id="answerB" name="answer_b"></textarea>
+				<textarea  placeholder="C variantni kiriting..." id="answerC" name="answer_c"></textarea>
+				<textarea  placeholder="D variantni kiriting..." id="answerD" name="answer_d"></textarea>
+				<button class="form-button">Savol Qo'sish</button>
+			</form>
+		</div>
+		<div class="columnleft">
+			<div id="result"></div>
+			<div class="answers">
+			<div id="answer-a"></div>
+			<div id="answer-b"></div>
+			<div id="answer-c"></div>
+			<div id="answer-d"></div>
+			</div>
+			<div id="formula2" style="display: none"></div>
+			<br />
+		</div>
+		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.19.0/ckeditor.js" integrity="sha512-tjxUra6WjSA8H5+nC7G61SVqEXj1e958LdR4N8BGZeRx9tObm/YhsrUzY6tH4EuHQyZqOyu317pgV7f8YPFoAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		// document.getElementById('formula').addEventListener('change',function(){
+		// 	console.log(document.getElementById('formula').innerText)
+		// })
+		// CKEDITOR.replace( 'formula' );
+		$logo="\\text{L}\\hspace{-0.4em}\\raisebox{0.4ex}{\\footnotesize A}\\hspace{-0.2em}\\text{T}\\hspace{-0.15em}\\raisebox{-0.5ex}{E}\\hspace{-0.1em}\\text{X}";
+		katex.render($logo,logo); 
+		startup();
+    </script>
 
 </body>
+
 </html>

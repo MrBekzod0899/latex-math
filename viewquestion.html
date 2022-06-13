@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+	<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+	<title>KaTeX Live Demo</title>
+  <link id="local" rel="stylesheet" type="text/css" href="katex.min.css">
+  <script src="katex.min.js"></script>
+
+	<link rel="stylesheet" href="demo.css">
+	<script src="demo.js"></script>
+	<script src="sample1.js"></script>
+	<script src="samplecolour.js"></script>
+	<script src="sample2.js"></script>
+	<script src="version.js"></script>
+	<script src="copy-tex.min.js"></script>
+	<link rel="stylesheet" href="copy-tex.min.css">
+	<script src="mhchem.min.js"></script>
+</head>
+
+<body> 
+	<h1>Math Compiler</h1>
+	<span id="logo" style="display: none;" ></span> 
+	<input type="text" id="extra" style="display: none;">
+	<div id="extrabr"></div>
+	<div id="question-list">	
+		<div class="question-list">
+			<div id="formula2" style="display: none"></div>
+			<br />
+        </div>
+	</div>
+	<script>
+        viewQuestion()
+		$logo="\\text{L}\\hspace{-0.4em}\\raisebox{0.4ex}{\\footnotesize A}\\hspace{-0.2em}\\text{T}\\hspace{-0.15em}\\raisebox{-0.5ex}{E}\\hspace{-0.1em}\\text{X}";
+		katex.render($logo,logo); 
+		startup(); 
+    </script>
+</body>
+
+</html>
